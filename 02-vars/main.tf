@@ -13,3 +13,14 @@ variable "fruits_list" {
 output "fruits_list" {
   value = var.fruits_list[0]
 }
+
+variable "fruits_mapp" {
+  default = {
+    grapes = 10
+    papaya = 20
+  }
+}
+
+output "fruits_price" {
+  value = var.fruits_mapp["papaya"]
+}
