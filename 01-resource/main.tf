@@ -8,7 +8,7 @@ resource "aws_instance" "test" {
 }
 
 resource "aws_route53_record" "test" {
-  zone_id = "Z10413961HT8PFBW9XTRT"
+  zone_id = data.aws_route53_zone.zone_id.id
   name    = "test.autonagar.com"
   type    = "A"
   ttl     = 30
