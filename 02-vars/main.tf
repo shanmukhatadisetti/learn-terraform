@@ -5,3 +5,11 @@ variable "fruits" {
 output "fruits" {
   value = var.fruits
 }
+
+variable "fruits_list" {
+  default = ["apple","pineapple"]
+}
+
+output "fruits_list" {
+  value = var.fruits_list
+}
