@@ -9,7 +9,7 @@ resource "aws_instance" "test" {
 
 resource "aws_route53_record" "test" {
   zone_id = data.aws_route53_zone.zone_id.id
-  name    = "test.autonagar.com"
+  name    = "test.autonagar.in"
   type    = "A"
   ttl     = 30
   records = [aws_instance.test.private_ip]
