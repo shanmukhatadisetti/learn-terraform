@@ -1,5 +1,5 @@
 resource "aws_instance" "test" {
-  ami           = "ami-03265a0778a880afb"
+  ami           = data.aws_ami.ami.image_id
   instance_type = "t3.micro"
 
   tags = {
