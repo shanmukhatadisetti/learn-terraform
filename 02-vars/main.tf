@@ -1,5 +1,5 @@
 variable "fruits" {
-  default = orange
+  default = "orange"
 }
 
 output "fruits" {
