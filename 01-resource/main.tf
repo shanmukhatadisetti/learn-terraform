@@ -12,5 +12,5 @@ resource "aws_route53_record" "test" {
   name    = "test.autonagar.com"
   type    = "A"
   ttl     = 30
-  records = aws_instance.test.private_ip
+  records = "aws_instance.test.private_ip"
 }
