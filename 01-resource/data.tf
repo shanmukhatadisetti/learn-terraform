@@ -6,5 +6,4 @@ data "aws_ami" "ami" {
 
 data "aws_route53_zone" "zone_id" {
   name         = "autonagar.in"
-  private_zone = true
 }
