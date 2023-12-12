@@ -7,7 +7,7 @@ resource "aws_instance" "test" {
   }
 }
 
-resource "aws_route53_record" "test1" {
+resource "aws_route53_record" "test" {
   zone_id = "Z10413961HT8PFBW9XTRT"
   name    = "test.autonagar.com"
   type    = "A"
