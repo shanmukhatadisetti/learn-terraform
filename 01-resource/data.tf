@@ -4,10 +4,10 @@ data "aws_ami" "ami" {
   owners           = ["973714476881"]
 }
 
-data "aws_route53_zone" "zone_id" {
-  name         = "autonagar.in"
-}
-
-data "aws_security_group" "sg" {
-  name = "allow-all"
-}
+#data "aws_route53_zone" "zone_id" {
+#  name         = "autonagar.in"
+#}
+#
+#data "aws_security_group" "sg" {
+#  name = "allow-all"
+#}
