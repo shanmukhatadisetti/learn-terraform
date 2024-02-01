@@ -18,6 +18,7 @@ variable "fruits_mapp" {
   default = {
     grapes = 10
     papaya = 20
+    apply = 30
   }
 }
 
