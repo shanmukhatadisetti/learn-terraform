@@ -11,7 +11,7 @@ variable "fruits_list" {
 }
 
 output "fruits_list" {
-  value = var.fruits_list[0]
+  value = var.fruits_list[2]
 }
 
 variable "fruits_mapp" {
