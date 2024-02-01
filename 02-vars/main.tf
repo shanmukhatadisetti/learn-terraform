@@ -23,5 +23,5 @@ variable "fruits_mapp" {
 }
 
 output "fruits_price" {
-  value = "price of papaya = ${var.fruits_mapp["papaya"]}"
+  value = "price of papaya = ${var.fruits_mapp["apple"]}"
 }
