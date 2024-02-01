@@ -7,7 +7,7 @@ output "fruits" {
 }
 
 variable "fruits_list" {
-  default = ["apple","pineapple"]
+  default = ["apple","pineapple","papaya"]
 }
 
 output "fruits_list" {
