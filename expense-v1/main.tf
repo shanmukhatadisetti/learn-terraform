@@ -23,7 +23,7 @@ resource "null_resource" "frontend" {
 cd /home/centos/expense-ansible
 git pull
 sleep 60
-ansibe-playbook -i ${aws_instance.frontend.private_ip}, -e ansible_user=centos -e ansible_password=DevOps321 expense.yml -e role_name=frontend
+ansible-playbook -i ${aws_instance.frontend.private_ip}, -e ansible_user=centos -e ansible_password=DevOps321 expense.yml -e role_name=frontend
 EOF
   }
 }
