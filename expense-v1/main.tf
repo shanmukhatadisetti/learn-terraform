@@ -4,13 +4,13 @@ resource "aws_instance" "frontend" {
   vpc_security_group_ids = [data.aws_security_group.sg.id]
 
   tags = {
-    Name = "fromtend"
+    Name = "frontend"
   }
 }
 
 resource "aws_route53_record" "frontend" {
   zone_id = "Z056004628V1082ZXL76U"
-  name    = "www.frontend.autonagar.in"
+  name    = "frontend.autonagar.in"
   type    = "A"
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
