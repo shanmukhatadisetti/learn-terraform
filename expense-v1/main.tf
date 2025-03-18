@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
-  ami           = "ami-0b4f379183e5706b9"
+  ami           = data.aws_ami.ami.image_id
   instance_type = "t3.micro"
-  vpc_security_group_ids = ["sg-0a4c0688a00749ae0"]
+  vpc_security_group_ids = data.aws_security_group.sg.id
 
   tags = {
     Name = "fromtend"
@@ -14,4 +14,16 @@ resource "aws_route53_record" "frontend" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
+}
+
+resource "null_resource" "frontend" {
+  depends_on = [aws_route53_record.frontend]
+  provisioner "local-exec" {
+    command = <<EOF
+cd /home/centos/expense-ansible
+git pull
+sleep 60
+ansibe-playbook -i ${aws_instance.frontend.private_ip}, -e ansible_user=centos -e ansible_password=DevOps321 expense.yml -e role_name=frontend
+EOF
+  }
 }
